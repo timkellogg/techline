@@ -10,7 +10,8 @@ export default Ember.Component.extend({
         notes: this.get('notes'),
         author: this.get('author'),
         time: new Date(),
-        edited_at: false
+        edited_at: false,
+        category: this.get('category')
       };
       this.sendAction('saveQuestion', params);
     }

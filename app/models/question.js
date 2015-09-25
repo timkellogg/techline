@@ -7,5 +7,6 @@ export default DS.Model.extend({
   author: DS.attr(),
   time: DS.attr(),
   answers: DS.hasMany('answer', { async: true }),
-  edited_at: DS.attr()
+  edited_at: DS.attr(),
+  category: DS.belongsTo('category', { async: true })
 });

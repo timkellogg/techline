@@ -1,0 +1,33 @@
+<div id="new-category-wrapper" class="container">
+
+  <div class="text-center row">
+    <h1>All Categories</h1>
+  </div>
+
+  <div class="col-md-8">
+    <div class="text-center">
+      {{create-category-form saveCategory="saveCategory"}}
+    </div>
+
+    <ul class="list-group">
+      {{#each model.categories as |category|}}
+        {{#link-to 'category' category.id class='question-tile-link'}}
+          {{category-tile category=category}}
+        {{/link-to}}
+      {{/each}}
+    </ul>
+  </div>
+
+  <div class="col-md-4">
+    <aside id="question-helper-wrapper" class="slight-margin-top">
+      <div id="question-helper-content" class="well">
+        <h3>Should I create a new category?</h3>
+        <p>
+          You should only create a new category if you feel it is necessary and relates
+          to programming.
+        </p>
+      </div>
+    </aside>
+  </div>
+
+</div>

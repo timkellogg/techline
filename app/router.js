@@ -8,6 +8,8 @@ var Router = Ember.Router.extend({
 Router.map(function() {
   this.route('new-question');
   this.route('question', { path: '/question/:question_id' });
+  this.route('category', { path: '/category/:category_id' });
+  this.route('browse-categories');
 });
 
 export default Router;

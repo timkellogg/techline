@@ -20,6 +20,15 @@
       {{textarea cols='100' rows='10' value=notes id="notes" class="form-control"}}
     </div>
 
+    <div class="form-group">
+      <label for="category">Category</label>
+      <select class="form-control">
+        <option>Algorithms</option>
+        <option>Assembly</option>
+        <option>JavaScript</option>
+        <option>Ruby</option>
+      </select>
+    </div>
     <div class="row text-center">
       <button class="btn btn-primary" {{action 'saveQuestion'}}>Create Question</button>
     </div>
