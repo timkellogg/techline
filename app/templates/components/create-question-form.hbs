@@ -1,0 +1,27 @@
+<div class="col-md-8">
+  <form>
+    <div class="form-group">
+      <label for="title">Title:</label><br>
+      {{input value=title id="title" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="content">Content:</label><br>
+      {{textarea cols='100' rows='20' value=content id="content" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author</label><br>
+      {{input value=author id="author" class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Additional notes:</label><br>
+      {{textarea cols='100' rows='10' value=notes id="notes" class="form-control"}}
+    </div>
+
+    <div class="row text-center">
+      <button class="btn btn-primary" {{action 'saveQuestion'}}>Create Question</button>
+    </div>
+  </form>
+</div>
