@@ -1,7 +1,7 @@
 <div id="question-page-wrapper" class="container">
 
   <div class="text-left">
-    <h2>{{model.title}}</h2>
+    <h2>{{model.title}}<button class="btn btn-danger pull-right" {{action "deleteQuestion" model}}>Delete Question</button></h2>
   </div>
   <hr>
 
@@ -13,14 +13,14 @@
     <div id="question-actions" class="text-left row">
       {{create-answer-form saveAnswer="saveAnswer" model=model}}
       {{update-question-form model=model updateQuestion="updateQuestion"}}
-      <button class="btn btn-danger btn-control" {{action "deleteQuestion" model}}>Delete</button>
+
     </div>
 
     <div id="comments-container">
       {{#each model.answers as |answer|}}
       <div class="panel panel-default">
         <div class="panel-heading">
-          <h3 class="panel-title">{{answer.author}} - {{moment-from-now answer.time}}</h3>
+          <h3 class="panel-title">{{answer.author}} - <em>{{moment-from-now answer.time}}</em></h3>
         </div>
         <div class="panel-body">
           {{answer.content}}
