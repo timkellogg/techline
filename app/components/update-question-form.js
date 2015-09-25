@@ -11,7 +11,6 @@ export default Ember.Component.extend({
       this.set("updateForm", false);
     },
     updateQuestion(model) {
-      debugger;
       var params = {
         title: this.get('title'),
         content: this.get('content'),

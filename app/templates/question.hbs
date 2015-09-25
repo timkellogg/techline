@@ -20,5 +20,6 @@
 
   <div id="question-actions" class="row">
     {{update-question-form model=model updateQuestion="updateQuestion"}}
+    <button class="btn btn-danger" {{action "deleteQuestion" model}}>Delete</button>
   </div>
 </div>
