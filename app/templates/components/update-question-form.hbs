@@ -1,0 +1,34 @@
+{{#if updateForm}}
+<div class="col-md-8">
+  <a href="#" {{action 'hideUpdateForm'}}>cancel edit</a>
+  <form>
+    <div class="form-group">
+      <label for="title">Title</label><br>
+      {{input value=title id="title" placeholder=model.title class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="content">Content</label><br>
+      {{textarea cols='100' rows='20' class="form-control" value=content id="content" placeholder=model.content}}
+    </div>
+
+    <div class="form-group">
+      <label for="notes">Notes:</label><br>
+      {{input value=notes id="notes" placeholder=model.notes class="form-control"}}
+    </div>
+
+    <div class="form-group">
+      <label for="author">Author:</label><br>
+      {{input value=author id="author" placeholder=model.author class="form-control"}}
+    </div>
+
+    <div class="row text-center">
+      <button class="btn btn-default" {{action 'updateQuestion' model}}>confirm edits</button>
+    </div>
+  </form>
+</div>
+{{else}}
+<div class="col-md-8">
+  <a href="#" {{action 'showUpdateForm'}}>edit</a>
+</div>
+{{/if}}

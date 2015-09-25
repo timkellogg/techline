@@ -3,6 +3,8 @@
 <!-- List all questions -->
 <ul class="list-group">
   {{#each model.questions as |question|}}
-    {{question-tile question=question}}
+    {{#link-to 'question' question.id class='question-tile-link'}}
+      {{question-tile question=question}}
+    {{/link-to}}
   {{/each}}
 </ul>

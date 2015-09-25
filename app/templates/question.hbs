@@ -1,0 +1,24 @@
+<div id="question-page-wrapper" class="container">
+
+  <div class="text-left">
+    <h2>{{model.title}}</h2>
+  </div>
+  <hr>
+
+  <div class="col-md-8 text-left">
+    {{model.content}}
+  </div>
+
+  <div class="col-md-4">
+    <aside id="question-helper-wrapper">
+      <div id="question-helper-content" class="well">
+        <h3>Question Details</h3>
+        <p> asked: {{moment-from-now model.time}}</p>
+      </div>
+    </aside>
+  </div>
+
+  <div id="question-actions" class="row">
+    {{update-question-form model=model updateQuestion="updateQuestion"}}
+  </div>
+</div>

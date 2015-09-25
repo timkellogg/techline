@@ -19,7 +19,8 @@ $gray: #ccc;
 // Utility
 .slight-margin-top    {  margin-top: 2em;    }
 .slight-margin-bottom {  margin-bottom: 2em; }
-
+.slight-margin-left   {  margin-left: 2em;   }
+.slight-margin-right  {  margin-right: 2em;  }
 // Components
   // question-tile
   #qt-title {
@@ -34,6 +35,23 @@ $gray: #ccc;
 
   }
 
+  .question-tile-link {
+    text-decoration: none;
+    color: inherit;
+    &:hover {
+      text-decoration: none;
+      color: inherit;
+    }
+  }
+
 // Question helper
 #question-helper-wrapper {
+}
+
+.list-group-item {
+  margin-top: 10px;
+  &:hover {
+    background-color: darken($gray, 1%);
+    cursor: pointer;
+  }
 }
