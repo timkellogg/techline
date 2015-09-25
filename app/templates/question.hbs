@@ -38,11 +38,10 @@
       <div id="question-helper-content" class="well">
         <h3>Question Details</h3>
         <p> asked: {{moment-from-now model.time}}</p>
+        {{#if model.edited_at}}
+          <p>last edited: {{moment-from-now model.edited_at}}</p>
+        {{/if}}
       </div>
     </aside>
   </div>
-
-
-  <!-- Load Comments -->
-
 </div>

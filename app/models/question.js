@@ -6,5 +6,6 @@ export default DS.Model.extend({
   notes: DS.attr(),
   author: DS.attr(),
   time: DS.attr(),
-  answers: DS.hasMany('answer', { async: true })
+  answers: DS.hasMany('answer', { async: true }),
+  edited_at: DS.attr()
 });

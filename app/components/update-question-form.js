@@ -16,7 +16,8 @@ export default Ember.Component.extend({
         content: this.get('content'),
         notes: this.get('notes'),
         author: this.get('author'),
-        date: undefined
+        time: undefined,
+        edited_at: new Date()
       };
       this.sendAction('updateQuestion', model, params);
       this.set("updateForm", false);
