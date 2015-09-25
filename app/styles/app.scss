@@ -55,3 +55,18 @@ $gray: #ccc;
     cursor: pointer;
   }
 }
+
+// question page
+
+#question-content {
+  min-height: 200px;
+}
+
+#question-actions {
+  margin-left: 1px !important;
+}
+
+.btn-control {
+  margin-bottom: 5px;
+  width: 30%;
+}
