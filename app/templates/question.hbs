@@ -7,6 +7,11 @@
 
   <div class="col-md-8 text-left">
     {{model.content}}
+
+    <div id="question-actions" class="row">
+      {{update-question-form model=model updateQuestion="updateQuestion"}}
+      <button class="btn btn-danger" {{action "deleteQuestion" model}}>Delete</button>
+    </div>
   </div>
 
   <div class="col-md-4">
@@ -18,8 +23,23 @@
     </aside>
   </div>
 
-  <div id="question-actions" class="row">
-    {{update-question-form model=model updateQuestion="updateQuestion"}}
-    <button class="btn btn-danger" {{action "deleteQuestion" model}}>Delete</button>
+  <div class="row">
+    <p class="lead">Submit an answer:</p>
+
+    {{create-answer-form saveAnswer="saveAnswer" model=model}}
+  </div>
+
+  <!-- Load Comments -->
+  <div id="comments-container" class="container">
+    {{#each model.answers as |answer|}}
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{answer.author}} - {{moment-from-now answer.time}}</h3>
+      </div>
+      <div class="panel-body">
+        {{answer.content}}
+      </div>
+    </div>
+    {{/each}}
   </div>
 </div>

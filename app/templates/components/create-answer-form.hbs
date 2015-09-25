@@ -1,0 +1,22 @@
+{{#if answerForm}}
+  <div class="col-md-8">
+    <button {{action "hideAnswerForm"}}>Cancel Answer</button>
+    <form>
+      <div class="form-group">
+        <label for="author">Author:</label><br>
+        {{input value=author id="author" class="form-control"}}
+      </div>
+
+      <div class="form-group">
+        <label for="content">Content:</label><br>
+        {{textarea cols='100' rows='20' value=content id="content" class="form-control"}}
+      </div>
+
+      <div class="row text-center">
+        <button class="btn btn-primary" {{action 'saveAnswer'}}>Submit Answer</button>
+      </div>
+    </form>
+  </div>
+{{else}}
+  <button {{action "showAnswerForm"}}>Answer this question</button>
+{{/if}}
