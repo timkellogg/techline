@@ -25,6 +25,9 @@
         <div class="panel-body">
           {{answer.content}}
         </div>
+        <div class="panel-footer">
+          <button class="btn btn-danger" {{action "deleteAnswer" answer}}>Remove</button>
+        </div>
       </div>
       {{/each}}
     </div>

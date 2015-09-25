@@ -18,10 +18,26 @@ export default Ember.Route.extend({
       model.save();
       this.transitionTo('question', model.id);
     },
+    // deleteQuestion(model) {
+    //   if(confirm('Are you sure you want to delete this question?')) {
+    //     model.destroyRecord();
+    //     this.transitionTo('index');
+    //   }
+    // }
     deleteQuestion(model) {
       if(confirm('Are you sure you want to delete this question?')) {
-        model.destroyRecord();
+        var answer_deletions = model.get('answers').map(function(answer) {
+          return answer.destroyRecord();
+        });
+        Ember.RSVP.all(answer_deletions).then(function() {
+          return model.destroyRecord();
+        });
         this.transitionTo('index');
+      }
+    },
+    deleteAnswer(answer) {
+      if(confirm('Are you sure you want to delete this answer?')) {
+        answer.destroyRecord();
       }
     }
   }
