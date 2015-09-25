@@ -21,14 +21,14 @@
     </div>
 
     <div class="form-group">
-      <label for="category">Category</label>
-      <select class="form-control">
-        <option>Algorithms</option>
-        <option>Assembly</option>
-        <option>JavaScript</option>
-        <option>Ruby</option>
-      </select>
+      {{ember-selectize
+        content=model
+        optionValuePath="content.id"
+        optionLabelPath="content.name"
+        selection=model.item
+        placeholder="Select an item" }}
     </div>
+
     <div class="row text-center">
       <button class="btn btn-primary" {{action 'saveQuestion'}}>Create Question</button>
     </div>

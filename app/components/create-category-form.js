@@ -6,7 +6,11 @@ export default Ember.Component.extend({
       var params = {
         name: this.get('name')
       };
-      this.sendAction('saveCategory', params);
+      if(params.name === undefined) {
+        alert('Name must be filled out');
+      } else {
+        this.sendAction('saveCategory', params);
+      }
     }
   }
 });

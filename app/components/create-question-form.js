@@ -13,6 +13,7 @@ export default Ember.Component.extend({
         edited_at: false,
         category: this.get('category')
       };
+        debugger;
       this.sendAction('saveQuestion', params);
     }
   }
