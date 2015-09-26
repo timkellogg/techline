@@ -16,7 +16,7 @@ export default Ember.Route.extend({
           Ember.get(_this_, 'flashMessages').success('Question was successfully created');
         })
         .catch(function() {
-          Ember.get(_this_, 'flashMessages').success('Question was not created');
+          Ember.get(_this_, 'flashMessages').danger('Question was not created');
         });
       this.transitionTo('index'); // later transition to show-question page
     }

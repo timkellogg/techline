@@ -16,7 +16,7 @@ export default Ember.Route.extend({
           Ember.get(_this_, 'flashMessages').success('Category was successfully created');
         })
         .catch(function() {
-          Ember.get(_this_, 'flashMessages').success('Category was not created');
+          Ember.get(_this_, 'flashMessages').danger('Category was not created');
         })
       this.transitionTo('browse-categories');
     }
