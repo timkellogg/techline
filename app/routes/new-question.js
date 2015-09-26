@@ -8,9 +8,16 @@ export default Ember.Route.extend({
 
   actions: {
     saveQuestion(params) {
+      var _this_ = this;
       var newQuestion = this.store.createRecord('question', params);
       newQuestion.save();
-      params.category.save();
+      params.category.save()
+        .then(function() {
+          Ember.get(_this_, 'flashMessages').success('Question was successfully created');
+        })
+        .catch(function() {
+          Ember.get(_this_, 'flashMessages').success('Question was not created');
+        });
       this.transitionTo('index'); // later transition to show-question page
     }
   }
