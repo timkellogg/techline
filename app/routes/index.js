@@ -6,5 +6,17 @@ export default Ember.Route.extend({
       questions: this.store.findAll('question')
       // add categories later
     });
+  },
+
+  actions: {
+    searchQuestions(query) {
+      var allQuestions = this.store.peekAll('question');
+      var mapped = allQuestions.mapBy('content');
+      var filteredQuestions = mapped.filter(function(question) {
+        if (question.includes(query)) {
+          return true;
+        };
+      });
+    }
   }
 });
