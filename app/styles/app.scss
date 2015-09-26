@@ -25,14 +25,19 @@ $orange: orange;
 // Components
   // question-tile
   #qt-title {
-
+    font-weight: bold;
   }
 
   #qt-author {
-
+    font-variant: small-caps;
+    font-size: 18px;
   }
 
   #qt-time {
+
+  }
+
+  #qt-category {
 
   }
 
@@ -86,8 +91,12 @@ $orange: orange;
     margin-left: 15px;
   }
 
-  .nav-pills .btn {
+  .nav-pills a {
     color: $white;
+    text-decoration: none;
+  }
+
+  .nav-pills .btn {
 
     &:hover {
       background-color: $orange;
