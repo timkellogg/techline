@@ -1,10 +1,10 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+
   model() {
     return Ember.RSVP.hash({
       questions: this.store.findAll('question')
-      // add categories later
     });
   },
 
@@ -17,6 +17,7 @@ export default Ember.Route.extend({
           return true;
         };
       });
+      $("#search-results").text(filteredQuestions);
     }
   }
 });
