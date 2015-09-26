@@ -1,4 +1,7 @@
 <li class="list-group-item">
   <span class="badge">Answers: {{question.answers.length}}</span>
-  <span id="qt-title">{{question.title}}</span> - <span id="qt-author">{{question.author}}</span>, <span id="qt-time">{{moment-from-now question.time}}</span>
+  <span id="qt-title">{{question.title}}</span> -
+  <span id="qt-author">{{question.author}}</span>,
+  <span id="qt-time">{{moment-from-now question.time}}</span>
+  <span id="qt-category" class="label label-success">{{question.category.name}}</span>
 </li>
