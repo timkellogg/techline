@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Route.extend({
+  // searchResults: false,
+  results: [],
 
   model() {
     return Ember.RSVP.hash({
@@ -11,13 +13,16 @@ export default Ember.Route.extend({
   actions: {
     searchQuestions(query) {
       var allQuestions = this.store.peekAll('question');
-      var mapped = allQuestions.mapBy('content');
+      var mapped = allQuestions.mapBy('title');
       var filteredQuestions = mapped.filter(function(question) {
         if (question.includes(query)) {
           return true;
         };
       });
-      $("#search-results").text(filteredQuestions);
+      this.get('results');
+      this.results.push(filteredQuestions);
+      console.log(filteredQuestions);
+      // $("#search-results").text(filteredQuestions);
     }
   }
 });
