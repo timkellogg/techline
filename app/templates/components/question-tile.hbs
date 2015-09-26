@@ -1,5 +1,6 @@
 <li class="list-group-item">
-  <span class="badge">Answers: {{question.answers.length}}</span>
+  <span id="qt-answer-count" class="pull-right label label-default">Answers: {{question.answers.length}}</span>
+  <span id="qt-votes" class="pull-right label label-info">Votes: {{question.votes}}</span>
   <span id="qt-title">{{question.title}}</span> -
   <span id="qt-author">{{question.author}}</span>,
   <span id="qt-time">{{moment-from-now question.time}}</span>
