@@ -20,13 +20,15 @@
       {{textarea cols='100' rows='10' value=notes id="notes" class="form-control"}}
     </div>
 
+    <ul class="list-inline">
+      {{#each model as |model|}}
+        <li {{action "sendToInput" model}} class="label label-default">{{model.name}}</li>
+      {{/each}}
+    </ul>
+
     <div class="form-group">
-      {{ember-selectize
-        content=model
-        optionValuePath="content.id"
-        optionLabelPath="content.name"
-        selection=model.item
-        placeholder="Select an item" }}
+      <label for="category">Choose a category from above</label><br>
+      {{input value=category id="category" class="form-control"}}
     </div>
 
     <div class="row text-center">

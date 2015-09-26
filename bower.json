@@ -15,7 +15,6 @@
     "moment": ">= 2.8.0",
     "moment-timezone": ">= 0.1.0",
     "bootstrap": "~3.3.4",
-    "firebase": "^2.1.0",
-    "selectize": "~0.12.1"
+    "firebase": "^2.1.0"
   }
 }

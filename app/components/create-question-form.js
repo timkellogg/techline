@@ -3,6 +3,10 @@ import Ember from 'ember';
 export default Ember.Component.extend({
 
   actions: {
+    sendToInput(model) {
+      var categoryName = model.get('name');
+      console.log($("#category").val(categoryName));
+    },
     saveQuestion() {
       var params = {
         title: this.get('title'),
@@ -13,7 +17,7 @@ export default Ember.Component.extend({
         edited_at: false,
         category: this.get('category')
       };
-        debugger;
+
       this.sendAction('saveQuestion', params);
     }
   }
