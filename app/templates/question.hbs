@@ -19,6 +19,8 @@
       {{#each model.answers as |answer|}}
       <div class="panel panel-default">
         <div class="panel-heading">
+          <span class="glyphicon glyphicon-triangle-top" aria-hidden="true"></span>
+          <span class="glyphicon glyphicon-triangle-bottom" aria-hidden="true"></span>
           <h3 class="panel-title">{{answer.author}} - <em>{{moment-from-now answer.time}}</em></h3>
         </div>
         <div class="panel-body">

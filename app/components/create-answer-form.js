@@ -15,7 +15,8 @@ export default Ember.Component.extend({
         question: this.get('model'),
         author: this.get('author'),
         content: this.get('content'),
-        time: new Date()
+        time: new Date(),
+        votes: 0
       }
       this.set("answerForm", false);
       this.sendAction("saveAnswer", params);

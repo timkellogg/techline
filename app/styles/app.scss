@@ -109,3 +109,12 @@ $orange: orange;
     margin-left: -3px;
   }
 }
+
+// Icons/Images/Media
+.glyphicon {
+  font-size: 20px;
+  &:hover {
+    color: lighten($black, 50%);
+    cursor: pointer;
+  }
+}
