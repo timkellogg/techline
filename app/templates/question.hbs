@@ -22,7 +22,7 @@
           <h3 class="panel-title">{{answer.author}} - <em>{{moment-from-now answer.time}}</em></h3>
         </div>
         <div class="panel-body">
-          {{answer.content}}
+          {{markdown-to-html markdown=answer.content}}
         </div>
         <div class="panel-footer">
           <button class="btn btn-danger" {{action "deleteAnswer" answer}}>Remove</button>
