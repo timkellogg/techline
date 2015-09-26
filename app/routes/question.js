@@ -3,6 +3,18 @@ import Ember from 'ember';
 export default Ember.Route.extend({
 
   actions: {
+    upVoteAnswer(answer) {
+      var answer = this.store.find('answer', answer.id).then(function(record) {
+        record.incrementProperty("votes");
+        record.save();
+      });
+    },
+    downVoteAnswer(answer) {
+      var answer = this.store.find('answer', answer.id).then(function(record) {
+        record.decrementProperty("votes");
+        record.save();
+      });
+    },
     saveAnswer(params) {
       var _this_ = this;
       var newAnswer = this.store.createRecord('answer', params);

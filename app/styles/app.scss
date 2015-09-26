@@ -81,6 +81,10 @@ $orange: orange;
   cursor: pointer;
 }
 
+.vote-count {
+  font-size: 24px;
+}
+
 // controls-bar
 #options-bar-container {
   width: 88%;
@@ -97,7 +101,6 @@ $orange: orange;
   }
 
   .nav-pills .btn {
-
     &:hover {
       background-color: $orange;
     }
