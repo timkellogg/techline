@@ -2,10 +2,10 @@
   <div id="options-bar" class="row">
     <ul class="nav nav-pills">
       <li id="title">techline</li>
-      <li class="pull-right"><button class="btn">{{#link-to 'index'}}Questions{{/link-to}}</button></li>
-      <li class="pull-right"><button class="btn">{{#link-to 'browse-categories'}}Categories{{/link-to}}</button></li>
-      <li class="pull-right"><button class="btn">Unanswered</button></li>
-      <li class="pull-right"><button class="btn">{{#link-to 'new-question'}}Ask Question{{/link-to}}</button></li>
+      {{#link-to 'index'}}<li class="pull-right"><button class="btn">Questions</button></li>{{/link-to}}
+      {{#link-to 'browse-categories'}}<li class="pull-right"><button class="btn">Categories</button></li>{{/link-to}}
+      {{#link-to 'unanwsered-questions'}}<li class="pull-right"><button class="btn">Unanswered</button></li>{{/link-to}}
+      {{#link-to 'new-question'}}<li class="pull-right"><button class="btn">Ask Question</button></li>{{/link-to}}
     </ul>
   </div>
 </div>
