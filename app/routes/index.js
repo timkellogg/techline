@@ -22,7 +22,7 @@ export default Ember.Route.extend({
       this.get('results');
       this.results.push(filteredQuestions);
       console.log(filteredQuestions);
-      // $("#search-results").text(filteredQuestions);
+      $("#search-results").text(filteredQuestions);
     }
   }
 });
