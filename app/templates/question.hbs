@@ -6,14 +6,13 @@
   <hr>
 
   <div class="col-md-8 text-left">
-    <div id="question-content" class="well">
-      {{model.content}}
+    <div id="question-content">
+      {{markdown-to-html markdown=model.content}}
     </div>
-
+    <hr>
     <div id="question-actions" class="text-left row">
       {{create-answer-form saveAnswer="saveAnswer" model=model}}
       {{update-question-form model=model updateQuestion="updateQuestion"}}
-
     </div>
 
     <div id="comments-container">
