@@ -6,6 +6,11 @@
   <hr>
 
   <div class="col-md-8 text-left">
+    <div id="question-votes">
+      <span class="vote-count">{{model.votes}}</span>
+      <span class="glyphicon glyphicon-triangle-top" {{action "upVoteQuestion" model}} aria-hidden="true"></span>
+      <span class="glyphicon glyphicon-triangle-bottom" {{action "downVoteQuestion" model}} aria-hidden="true"></span>
+    </div>
     <div id="question-content">
       {{markdown-to-html markdown=model.content}}
     </div>

@@ -18,6 +18,7 @@ export default Ember.Component.extend({
         time: new Date(),
         edited_at: false,
         category: this.categoryRecord,
+        votes: 0
       };
       this.sendAction('saveQuestion', params);
     }
