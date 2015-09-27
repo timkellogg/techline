@@ -1,16 +1,17 @@
 <div id="question-page-wrapper" class="container">
 
-  <div class="text-left">
-    <h2>{{model.title}}<button class="btn btn-danger pull-right" {{action "deleteQuestion" model}}>Delete Question</button></h2>
+  <div class="text-left col-md-12">
+    <div id="question-votes">
+      <span class="glyphicon glyphicon-triangle-top" {{action "upVoteQuestion" model}} aria-hidden="true"></span><br>
+      <span class="vote-count">{{model.votes}}</span><h2 id="question-title">{{model.title}}<button class="btn btn-danger pull-right" {{action "deleteQuestion" model}}>Delete Question</button></h2><br>
+      <span class="glyphicon glyphicon-triangle-bottom" {{action "downVoteQuestion" model}} aria-hidden="true"></span>
+    </div>
   </div>
   <hr>
 
   <div class="col-md-8 text-left">
-    <div id="question-votes">
-      <span class="vote-count">{{model.votes}}</span>
-      <span class="glyphicon glyphicon-triangle-top" {{action "upVoteQuestion" model}} aria-hidden="true"></span>
-      <span class="glyphicon glyphicon-triangle-bottom" {{action "downVoteQuestion" model}} aria-hidden="true"></span>
-    </div>
+    <hr>
+
     <div id="question-content">
       {{markdown-to-html markdown=model.content}}
     </div>
@@ -48,6 +49,14 @@
         {{#if model.edited_at}}
           <p>last edited: {{moment-from-now model.edited_at}}</p>
         {{/if}}
+        <hr>
+        <h3>Helpful Hints</h3>
+        <p>This editor suppots markdown</p>
+        <p><code>code</code> can be created by surrounding text with ``</p>
+        <p><i>italics</i> are created using _text_</p>
+        <p><pre>code blocks</pre>are formed by indenting 4 spaces</p>
+        <p><h4>headings</h4> are created with hashes like #### </p>
+        <p><b>bolding</b> is done with **text**</p>
       </div>
     </aside>
   </div>

@@ -104,7 +104,7 @@ $orange: orange;
   padding-bottom: 10px;
 
   .nav-pills li {
-    margin-left: 10px;
+    margin-right: 10px;
   }
 
   .nav-pills a {
@@ -119,10 +119,19 @@ $orange: orange;
   }
 
   #title {
-    font-size: 36px;
+    font-size: 24px;
     color: $blue;
     margin-left: -3px;
   }
+}
+
+#question-title {
+  display: inline;
+  margin-left: 15px;
+}
+
+.vote-count {
+  margin-left: 3px;
 }
 
 // navbar
