@@ -11,8 +11,16 @@
 <!-- {{search-results results=results}} -->
 
 <!-- List all questions -->
-<ul class="list-group">
+<!-- <ul class="list-group">
   {{#each model.questions as |question|}}
+    {{#link-to 'question' question.id class='question-tile-link'}}
+      {{question-tile question=question}}
+    {{/link-to}}
+  {{/each}}
+</ul> -->
+
+<ul class="list-group">
+  {{#each sortedQuestions as |question|}}
     {{#link-to 'question' question.id class='question-tile-link'}}
       {{question-tile question=question}}
     {{/link-to}}
