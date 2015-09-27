@@ -7,7 +7,7 @@
     </div>
 
     <ul class="list-group">
-      {{#each model.categories as |category|}}
+      {{#each sortedCategories as |category|}}
         {{#link-to 'category' category.id class='question-tile-link'}}
           {{category-tile category=category}}
         {{/link-to}}
