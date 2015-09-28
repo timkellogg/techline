@@ -1,14 +1,16 @@
 <div id="category-wrapper" class="container">
 
-  <div class="row text-left">
+  <div class="text-left col-md-12">
     <h1>{{model.name}}</h1>
   </div>
 
-  <ul class="list-group">
-    {{#each model.questions as |question|}}
-      {{#link-to 'question' question.id class='question-tile-link'}}
-        {{question-tile question=question}}
-      {{/link-to}}
-    {{/each}}
-  </ul>
+<div class="col-md-12">
+    <ul class="list-group">
+      {{#each model.questions as |question|}}
+        {{#link-to 'question' question.id class='question-tile-link'}}
+          {{question-tile question=question}}
+        {{/link-to}}
+      {{/each}}
+    </ul>
+  </div>
 </div>

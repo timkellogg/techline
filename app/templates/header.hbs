@@ -7,19 +7,14 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#">{{#link-to 'index'}}techline{{/link-to}}</a>
+      <li><a class="navbar-brand" href="#">{{#link-to 'index'}}techline{{/link-to}}</a></li>
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="nav navbar-right">
-        {{#link-to 'search'}}<a href="#"><li>Search</li></a>{{/link-to}}
+        <li>{{#link-to 'search'}}<a href="#"><li>Search</li></a>{{/link-to}}</li>
       </div>
     </div>
   </div>
 </nav>
-<!-- <div class="nav navbar-right">
-  <form class="navbar-form navbar-left" role="search">
-   <div class="form-group">
-    {{input value=query id="query" class="form-control" key-press="searchQuestions" placeholder="search"}}
-   </div>
- </form>
-</div> -->
+
+<!-- <li><a href="#">Action</a></li> -->
