@@ -22,7 +22,7 @@
     </div>
 
     <div id="comments-container">
-      {{#each model.answers as |answer|}}
+      {{#each sortedAnswers as |answer|}}
       <div class="panel panel-default">
         <div class="panel-heading">
           <span class="glyphicon glyphicon-triangle-top" {{action "upVoteAnswer" answer}} aria-hidden="true"></span>
