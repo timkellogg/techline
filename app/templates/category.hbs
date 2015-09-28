@@ -4,7 +4,7 @@
     <h1>{{model.name}}</h1>
   </div>
 
-<div class="col-md-12">
+  <div class="col-md-12">
     <ul class="list-group">
       {{#each model.questions as |question|}}
         {{#link-to 'question' question.id class='question-tile-link'}}

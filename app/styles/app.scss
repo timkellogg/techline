@@ -8,12 +8,7 @@ $blue: blue;
 $orange: orange;
 
 // Fonts
-@mixin font-size($sizeValue: 1.4) {
-  $remValue: $sizeValue;
-  $pxValue: ($sizeValue * 10);
-  font-size: #{$pxValue}px;
-  font-size: #{$remValue}rem;
-}
+*  { font-family: 'Roboto', sans-serif; }
 
 // Utility
 .slight-margin-top    {  margin-top: 2em;    }
@@ -21,9 +16,6 @@ $orange: orange;
 .slight-margin-left   {  margin-left: 2em;   }
 .slight-margin-right  {  margin-right: 2em;  }
 
-*  {
-  font-family: 'Roboto', sans-serif;
-}
 
 #content-wrapper {
   min-height: 400px;
@@ -224,14 +216,17 @@ $orange: orange;
 
     .nav-pills {
       li {
+        margin: auto;
         display: block;
         margin-top: 5px;
+        width: 100%;
       }
       a {
         text-decoration: none;
       }
       .btn {
         display: block;
+        width: 100%;
       }
     }
 
@@ -241,6 +236,10 @@ $orange: orange;
   }
   .btn-control {
     margin-bottom: 10px;
+    width: 100%;
+  }
+  #delete-btn {
+    display: block;
     width: 100%;
   }
 }
