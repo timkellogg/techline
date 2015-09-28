@@ -222,10 +222,17 @@ $orange: orange;
   }
 }
 
+// button states
+
 .btn:hover {
   -ms-transform: scale(1.09);
   -webkit-transform: scale(1.09);
   transform: scale(1.09);
+}
+
+.btn:focus {
+  outline: none !important; // necessary for bootstrap override of blue outline
+  color: $white;
 }
 
 /* Custom, iPhone Retina */
