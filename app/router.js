@@ -13,6 +13,7 @@ Router.map(function() {
   this.route('unanwsered-questions');
   this.route('about');
   this.route('contact');
+  this.route('search');
 });
 
 export default Router;

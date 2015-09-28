@@ -1,0 +1,15 @@
+<div class="container">
+  <form class="navbar-form navbar-left" role="search">
+   <div class="form-group">
+    {{input value=query id="query" class="form-control" key-press="searchQuestions" placeholder="search"}}
+   </div>
+  </form>
+</div>
+
+<ul class="list-group well">
+  {{#each question in searchQuestions}}
+    {{#link-to 'question' question.id class='question-tile-link'}}
+      {{question-tile question=question}}
+    {{/link-to}}
+  {{/each}}
+</ul>
