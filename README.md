@@ -1,6 +1,6 @@
 # Techline
 
-_techline_ is a StackOverflow clone that supports creating/editing/destroying questions, creating/destroying questions, creating categories, upvoting questions/answeres, downvoting questions/answers, sorting and searching questions. 
+_techline_ is a StackOverflow clone that supports creating/editing/destroying questions, creating/destroying questions, creating categories, upvoting questions/answers, downvoting questions/answers, sorting and searching questions. 
 
 ## Prerequisites
 
