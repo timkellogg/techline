@@ -6,8 +6,8 @@ $black: #000;
 $gray: #ccc;
 $blue: blue;
 $orange: orange;
-// Fonts
 
+// Fonts
 @mixin font-size($sizeValue: 1.4) {
   $remValue: $sizeValue;
   $pxValue: ($sizeValue * 10);
@@ -107,18 +107,20 @@ $orange: orange;
   padding-top: 10px;
   padding-bottom: 10px;
 
-  .nav-pills li {
-    margin-right: 10px;
-  }
-
-  .nav-pills a {
-    color: $white;
-    text-decoration: none;
-  }
-
-  .nav-pills .btn {
-    &:hover {
-      background-color: $orange;
+  .nav-pills {
+    li {
+      margin-right: 10px;
+    }
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+    .btn {
+      background-color: #222;
+      &:hover {
+        color: $white;
+        font-weight: bolder;
+      }
     }
   }
 
@@ -196,7 +198,6 @@ $orange: orange;
 }
 
 // footer
-
 #footer {
   .well {
     background-color: #2f2f2f;
@@ -213,29 +214,33 @@ $orange: orange;
 }
 
 /* Custom, iPhone Retina */
-  @media only screen and (max-width : 768px) {
+@media only screen and (max-width : 768px) {
 
-    #options-bar-container {
-      width: 100%;
-      padding-top: 10px;
-      padding-bottom: 10px;
-      margin: auto;
+  #options-bar-container {
+    width: 100%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: auto;
 
-      .nav-pills li {
+    .nav-pills {
+      li {
         display: block;
         margin-top: 5px;
       }
-
-      .nav-pills a {
+      a {
         text-decoration: none;
       }
-
-      .nav-pills .btn {
+      .btn {
         display: block;
       }
+    }
 
-      #title {
-        display: none;
-      }
+    #title {
+      display: none;
     }
   }
+  .btn-control {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+}
