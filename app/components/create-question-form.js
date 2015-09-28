@@ -17,7 +17,7 @@ export default Ember.Component.extend({
         author: this.get('author'),
         time: new Date(),
         edited_at: false,
-        category: this.categoryRecord,
+        category: this.categoryRecord, // need to insert a fallback method if no categories or else won't save (fails silently)
         votes: 0
       };
       this.sendAction('saveQuestion', params);
