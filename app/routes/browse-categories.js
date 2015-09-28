@@ -17,7 +17,7 @@ export default Ember.Route.extend({
         })
         .catch(function() {
           Ember.get(_this_, 'flashMessages').danger('Category was not created');
-        })
+        });
       this.transitionTo('browse-categories');
     }
   }

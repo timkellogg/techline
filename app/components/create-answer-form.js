@@ -17,7 +17,7 @@ export default Ember.Component.extend({
         content: this.get('content'),
         time: new Date(),
         votes: 0
-      }
+      };
       this.set("answerForm", false);
       this.sendAction("saveAnswer", params);
     }
