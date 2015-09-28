@@ -16,6 +16,7 @@
     "moment-timezone": ">= 0.1.0",
     "bootstrap": "~3.3.4",
     "firebase": "^2.1.0",
-    "showdown": "~1.2.3"
+    "showdown": "~1.2.3",
+    "font-awesome": "~4.4.0"
   }
 }
