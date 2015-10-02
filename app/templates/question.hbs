@@ -15,8 +15,13 @@
       {{markdown-to-html markdown=model.content}}
     </div>
     <hr>
+
     <div id="question-actions" class="text-left row">
-      {{create-answer-form saveAnswer="saveAnswer" model=model}}
+      {{#if session.isAuthenticated}}
+        {{create-answer-form saveAnswer="saveAnswer" model=model}}
+      {{else}}
+        <button class="btn btn-primary btn-control" {{action "signIn" "google"}}>You must first sign in!</button>
+      {{/if}}
       {{update-question-form model=model updateQuestion="updateQuestion"}}
     </div>
 
