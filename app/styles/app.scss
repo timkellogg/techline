@@ -181,6 +181,16 @@ $orange: orange;
   }
 }
 
+.usr-image img {
+  height: 50px;
+  width: 50px;
+}
+
+#user-image-large {
+  height: 150px;
+  width: 150px;
+}
+
 .fa {
   color: $black;
   &:hover {

@@ -1,0 +1,5 @@
+<div class="well">
+  {{#each model as |user|}}
+    {{#link-to 'user' user}}{{user-tile user=user}}{{/link-to}}
+  {{/each}}
+</div>

@@ -1,5 +1,5 @@
 <div id="new-question-wrapper" class="container">
-
+  {{#if session.isAuthenticated}}
   <div class="text-left col-md-12">
     <h1>New Question</h1>
   </div>
@@ -16,5 +16,7 @@
       </div>
     </aside>
   </div>
-
+  {{else}}
+    <button {{action "signIn" "google"}}>You must first sign in!</button>
+  {{/if}}
 </div>

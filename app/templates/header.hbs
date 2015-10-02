@@ -11,6 +11,13 @@
     </div>
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <div class="nav navbar-right">
+        {{#if session.isAuthenticated}}
+          <li><a href="#"><li {{action "signOut"}}>Sign Out</li></a></li>
+        {{else}}
+          <li><a href="#"><li {{action "signIn" "google"}}>Sign in with Google</li></a></li>
+        {{/if}}
+      </div>
+      <div class="nav navbar-left">
         <li>{{#link-to 'search'}}<a href="#"><li>Search</li></a>{{/link-to}}</li>
       </div>
     </div>
