@@ -26,14 +26,6 @@ export default Ember.Route.extend({
           remember: "sessionOnly",
           scope: "email"
         });
-
-        // this.get("session").open("firebase", { provider: provider}).then(function(data) {
-        //   ref.child("users").child(data.uid).set({
-        //     email: "tim.kellogg@gmail.com",
-        //     username: data.currentUser.displayName,
-        //     imageURL: data.currentUser.profileImageURL
-        //   });
-        // });
       },
       signOut: function() {
         this.get("session").close();
