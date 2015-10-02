@@ -6,7 +6,10 @@ module.exports = function(environment) {
     environment: environment,
     contentSecurityPolicy: { 'connect-src': "'self' https://auth.firebase.com wss://*.firebaseio.com" },
     firebase: 'https://techline.firebaseio.com/',
-    torii: { sessionServiceName: 'session' },
+    torii: {
+      sessionServiceName: 'session',
+      scope: 'email' 
+    },
     baseURL: '/',
     locationType: 'auto',
     EmberENV: {

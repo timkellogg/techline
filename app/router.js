@@ -14,6 +14,7 @@ Router.map(function() {
   this.route('about');
   this.route('contact');
   this.route('search');
+  this.route('profile', { path: '/profile/:profile_id' });
 });
 
 export default Router;
